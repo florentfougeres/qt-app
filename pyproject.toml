@@ -1,0 +1,20 @@
+# Section build-system (une seule occurrence)
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Section project
+[project]
+name = "MyQtApp"
+version = "0.1.0"
+description = "Une application PyQt6"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Florent", email = "florent.fougeres@gmail.com" }]
+dependencies = [
+    "PyQt6",
+]
+
+# Section des scripts (une seule occurrence)
+[project.scripts]
+myqtapp = "MyQtApp.__main__:main"
