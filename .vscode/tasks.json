@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Format with Black",
+        "type": "shell",
+        "command": "black",
+        "args": [
+          "--line-length", "88",
+          "."
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [],
+        "detail": "Format the Python code using Black"
+      },
+      {
+        "label": "Sort imports with isort",
+        "type": "shell",
+        "command": "isort",
+        "args": [
+          "."
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "problemMatcher": [],
+        "detail": "Sort imports in the Python code using isort"
+      }
+    ]
+  }
